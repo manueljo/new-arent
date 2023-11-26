@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-leaflet = "*"
+django-geoposition-2 = "*"
+django-allauth = "*"
+django-crispy-forms = "*"
+pillow = "*"
+folium = "*"
+crispy-bootstrap5 = "*"
+django-template-partials = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
