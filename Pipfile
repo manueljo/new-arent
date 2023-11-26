@@ -13,6 +13,7 @@ pillow = "*"
 folium = "*"
 crispy-bootstrap5 = "*"
 django-template-partials = "*"
+gunicorn = "*"
 
 [dev-packages]
 
