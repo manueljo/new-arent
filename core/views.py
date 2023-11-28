@@ -1,8 +1,51 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Areas,Apartment, Profile
 import folium
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 # Create your views here.
+
+@csrf_exempt
+def ussd(request):
+    if request.method == 'POST':
+        session_id = request.POST.get('sessionId')
+        service_code = request.POST.get('serviceCode')
+        phone_number = request.POST.get('phoneNumber')
+        text = request.POST.get('text')
+        agent = Profile.objects.filter(pk=1).values()
+
+        response = ""
+
+        if text == "":
+            response = "CON Select area to find agent \n"
+            # response .= "1. My Account \n"
+            response += "1. Ikeja"
+            response += "2. Ikorodu"
+            response += "3. Agege"
+
+        elif text == "1":
+            response = "CON Agents in Ikeja \n"
+            response = f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
+
+        elif text == "1*1":
+            response = f"END My Phone number is {agent[0].get('mobile_number')}"
+
+        elif text == "2":
+            response = "CON Agents in Ikorodu \n"
+            response = f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
+
+        elif text == "1*2":
+            response = f"END My Phone number is {agent[0].get('mobile_number')}"
+
+        elif text == "3":
+            response = "CON Agents in Ikorodu \n"
+            response = f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
+
+        elif text == "1*3":
+            response = f"END My Phone number is {agent[0].get('mobile_number')}"
+
+        return HttpResponse(response)
 
 
 def index(request):
