@@ -3,7 +3,6 @@ branca==0.7.0
 certifi==2023.11.17
 cffi==1.15.1
 charset-normalizer==3.3.2
-crispy-bootstrap5==2023.10
 cryptography==41.0.5
 defusedxml==0.7.1
 Django==4.2.7
