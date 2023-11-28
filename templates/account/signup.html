@@ -29,7 +29,7 @@
         {% slot body %}
             {% csrf_token %}
             {% element fields form=form unlabeled=True %}
-            {{form|crispy}}
+            {{form}}
             {% endelement %}
             {% if redirect_field_value %}
                 <input type="hidden"
