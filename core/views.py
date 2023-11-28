@@ -20,8 +20,8 @@ def ussd(request):
         if text == "":
             response = "CON Select area to find agent \n"
             # response .= "1. My Account \n"
-            response += "1. Ikeja"
-            response += "2. Ikorodu"
+            response += "1. Ikeja \n"
+            response += "2. Ikorodu \n"
             response += "3. Agege"
 
         elif text == "1":
