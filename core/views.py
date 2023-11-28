@@ -25,22 +25,22 @@ def ussd(request):
             response += "3. Agege"
 
         elif text == "1":
-            response = "CON Agents in Ikeja \n"
-            response = f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
+            response += "CON Agents in Ikeja \n"
+            response += f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
 
         elif text == "1*1":
             response = f"END My Phone number is {agent[0].get('mobile_number')}"
 
         elif text == "2":
-            response = "CON Agents in Ikorodu \n"
-            response = f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
+            response += "CON Agents in Ikorodu \n"
+            response += f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
 
         elif text == "1*2":
             response = f"END My Phone number is {agent[0].get('mobile_number')}"
 
         elif text == "3":
-            response = "CON Agents in Ikorodu \n"
-            response = f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
+            response += "CON Agents in Ikorodu \n"
+            response += f"1. {agent[0].get('first_name')} {agent[0].get('last_name')}"
 
         elif text == "1*3":
             response = f"END My Phone number is {agent[0].get('mobile_number')}"
