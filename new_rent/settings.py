@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zlg@we(he(l_neife-kpv8!b)(__*e4uzl=@=ud&!3n_8b$8c@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'core.User'
 
@@ -44,8 +44,8 @@ INSTALLED_APPS = [
 
     'core',
     'geoposition',
-    'crispy_forms',
-    'crispy_bootstrap5',
+    # 'crispy_forms',
+    # 'crispy_bootstrap5',
     'template_partials',
 
     'allauth',
@@ -158,8 +158,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GEOPOSITION_BACKEND = 'leaflet'
 GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyD57JsmCdXxP0p35v1KE7sA0T1ZYYGVzCc'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+# CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+# CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
