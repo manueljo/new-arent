@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zlg@we(he(l_neife-kpv8!b)(__*e4uzl=@=ud&!3n_8b$8c@'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -157,7 +157,7 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 GEOPOSITION_BACKEND = 'leaflet'
-GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyD57JsmCdXxP0p35v1KE7sA0T1ZYYGVzCc'
+GEOPOSITION_GOOGLE_MAPS_API_KEY = '<your-api-key>'
 
 # CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 # CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -177,7 +177,7 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mikebillyy@gmail.com'
-EMAIL_HOST_PASSWORD = 'lvrkhzhijemxxzuu'
+EMAIL_HOST_PASSWORD = '<your-app-password>'
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "optional"
